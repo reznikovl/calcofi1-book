@@ -7,3 +7,4 @@
     - file: markdown
     - file: notebooks
     - file: correlations
+    - file: animation_test
