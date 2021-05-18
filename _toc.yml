@@ -2,6 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
+- file: exploratory
+  sections:
+    - file: summary_of_data
 - file: content
   sections:
     - file: markdown
