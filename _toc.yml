@@ -8,9 +8,9 @@
     - file: population_visualization
 - file: content
   sections:
-    - file: markdown
-    - file: notebooks
+    # - file: markdown
+    # - file: notebooks
     - file: correlations
     - file: sardine_correlation
     - file: environment_correlation
-    - file: animation_test
+    # - file: animation_test
