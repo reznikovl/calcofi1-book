@@ -5,9 +5,12 @@
 - file: exploratory
   sections:
     - file: summary_of_data
+    - file: population_visualization
 - file: content
   sections:
     - file: markdown
     - file: notebooks
     - file: correlations
+    - file: sardine_correlation
+    - file: environment_correlation
     - file: animation_test
