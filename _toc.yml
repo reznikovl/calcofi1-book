@@ -4,7 +4,7 @@
 - file: intro
 - file: exploratory
   sections:
-    - file: summary_of_data
+    - file: data_summary
     - file: exploring_all_species
     - file: population_visualization
 - file: content
