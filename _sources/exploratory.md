@@ -1,4 +1,4 @@
 ### Exploratory Analysis
 
-various exploratory stuff can go here
+Let's walk through our exploratory analysis and take a look at our discoveries. 
 
