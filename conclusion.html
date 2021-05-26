@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CALCOFI Jupyter Book &#8212; CalCOFI</title>
+    <title>Conclusion &#8212; CalCOFI</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,6 +52,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Sardine’s Relationship with the Ocean’s Temperature" href="environment_correlation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -88,7 +89,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="analysis_header.html">
    Analysis
@@ -143,8 +144,8 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="conclusion.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Conclusion
   </a>
  </li>
@@ -189,9 +190,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/README.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/conclusion.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -209,7 +210,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FREADME.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fconclusion.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -230,29 +231,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quick-start-to-running">
-   Quick start to running:
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#troubleshooting-notes-add-here-as-you-see-fit">
-   Troubleshooting notes (add here as you see fit):
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-make-changes-to-project">
-   How to make changes to project
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -261,57 +239,9 @@
         
               <div>
                 
-  <div class="section" id="calcofi-jupyter-book">
-<h1>CALCOFI Jupyter Book<a class="headerlink" href="#calcofi-jupyter-book" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="quick-start-to-running">
-<h2>Quick start to running:<a class="headerlink" href="#quick-start-to-running" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>If necessary, pip install jupyter-book. If you’re using conda, you may have to conda install jupyter-book (but I’ve never used conda so not 100% sure)</p></li>
-<li><p>Clone the repository, navigate to the directory, run “jupyter-book build .” (no quotes)</p></li>
-<li><p>You should see a _build/ directory. Either click the link in the terminal, or navigate to the _build/html directory and open index.html in a browser. You should now be able to see the website.</p></li>
-</ul>
-</div>
-<div class="section" id="troubleshooting-notes-add-here-as-you-see-fit">
-<h2>Troubleshooting notes (add here as you see fit):<a class="headerlink" href="#troubleshooting-notes-add-here-as-you-see-fit" title="Permalink to this headline">¶</a></h2>
-<ul>
-<li><p>I was getting a lot of issues with using the correct kernel. You may need to manually edit the metadata of the jupyter notebook you import to make sure the kernel is named correctly, following format in notebooks.ipynb</p></li>
-<li><p>To add a new page, you need to add it to _toc.yml (match what I did with correlations), and be sure the page has a title or it won’t build. For jupyter notebook cells what I did was add a markdown cell at the very top that just had # Title</p></li>
-<li><p>If VSCODE isn’t displaying an animated plot, try adding these lines of code above your plotting code:</p>
-<p>import <a class="reference external" href="http://plotly.io">plotly.io</a> as pio</p>
-<p>pio.renderers.default = ‘notebook’</p>
-</li>
-<li><p>To control which code chunks are hidden completely or just hidden but viewable by clicking a button, go into Jupyter Notebook, click the “View” tab, and then the “tags” button. If you want to <strong>completely omit a cell</strong> (hide both input and output), add <strong>“remove_input”</strong> to the tag box. If you want to <strong>hide a cell, but keep it’s output</strong>, add <strong>“hide_input”</strong> to the tag box. I couldn’t find a way to do this in VSCode, so you have to open the .ipynb file in Jupyter with Anaconda.</p></li>
-</ul>
-</div>
-<div class="section" id="how-to-make-changes-to-project">
-<h2>How to make changes to project<a class="headerlink" href="#how-to-make-changes-to-project" title="Permalink to this headline">¶</a></h2>
-<ol>
-<li><p>Make sure that your personal branch is updated with master branch (this can be done with the GitHub Desktop application)</p>
-<ul class="simple">
-<li><p>change ‘current repo’ to ‘calcofi-book1’</p></li>
-<li><p>change ‘current branch’ to your personal branch</p></li>
-<li><p>in the menu, select ‘branch’ -&gt; ‘update from master’</p></li>
-<li><p>click on the ‘push origin’ button that appears</p></li>
-</ul>
-<p>Now your branch is up to date with the master branch, and you can make changes to it.</p>
-</li>
-<li><p>Clone personal branch to local computer</p>
-<ul class="simple">
-<li><p>using the command line/terminal, navigate to desired folder</p></li>
-<li><p>type ‘git clone -b <your branch name> <repo url> to copy your branch to your computer</p></li>
-<li><p>note: the repo url is <a class="reference external" href="https://github.com/reznikovl/calcofi1-book.git">https://github.com/reznikovl/calcofi1-book.git</a></p></li>
-</ul>
-</li>
-<li><p>Push changes to personal branch</p>
-<ul class="simple">
-<li><p>in your working directory, type ‘git add.’</p></li>
-<li><p>use ‘git commit -m <comment about changes>’ to commit your changes</p></li>
-<li><p>use ‘git push origin <your branch name>’ to push changes to your personal branch</p></li>
-</ul>
-</li>
-<li><p>Create a pull request to the master branch</p></li>
-</ol>
-</div>
+  <div class="section" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h1>
+<p>we can put a nice summary/conclusion of all our analysis and findings here, with some pictures and stuff</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -339,6 +269,7 @@
         
         <div class='prev-next-bottom'>
             
+    <a class='left-prev' id="prev-link" href="environment_correlation.html" title="previous page">Sardine’s Relationship with the Ocean’s Temperature</a>
 
         </div>
         
