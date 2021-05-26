@@ -17,29 +17,60 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-X = sardine_data['CatchLbs'].values.reshape(-1,1)
-Y = sardine_data['Sardine Larvae lbs'].values.reshape(-1,1)
+X = sardine_data2['CatchLbs'].values.reshape(-1,1)
+Y = sardine_data2['Sardine Larvae lbs'].values.reshape(-1,1)
 linear_regressor = LinearRegression()
 linear_regressor.fit(X, Y)
 Y_pred = linear_regressor.predict(X)
 Y = np.array(Y).reshape(-1,)
 X = np.array(X).reshape(-1,)
-rmse = mean_squared_error(Y, Y_pred, squared=False)
 
-fig = px.scatter(sardine_data, x='CatchLbs', y='Sardine Larvae lbs', trendline="ols", title ='Sardine Larvae lbs vs Sardine Catch')
+fig = px.scatter(sardine_data2, x='CatchLbs', y='Sardine Larvae lbs', trendline="ols", title = 'Lagged Correlation for Sardine larve vs Sardine Catch')
 fig.show()
-print("Pearson Correlation:", stats.pearsonr(X, Y), "Root Mean Squared Error: ", rmse)
+print("Pearson Corerelation:", stats.pearsonr(X, Y))
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m<ipython-input-2-1fa3fe6d5ca8>[0m in [0;36m<module>[0;34m[0m
-[1;32m      6[0m [0mY[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0mY[0m[0;34m)[0m[0;34m.[0m[0mreshape[0m[0;34m([0m[0;34m-[0m[0;36m1[0m[0;34m,[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      7[0m [0mX[0m [0;34m=[0m [0mnp[0m[0;34m.[0m[0marray[0m[0;34m([0m[0mX[0m[0;34m)[0m[0;34m.[0m[0mreshape[0m[0;34m([0m[0;34m-[0m[0;36m1[0m[0;34m,[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 8[0;31m [0mrmse[0m [0;34m=[0m [0mmean_squared_error[0m[0;34m([0m[0mY[0m[0;34m,[0m [0mY_pred[0m[0;34m,[0m [0msquared[0m[0;34m=[0m[0;32mFalse[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      9[0m [0;34m[0m[0m
-[1;32m     10[0m [0mfig[0m [0;34m=[0m [0mpx[0m[0;34m.[0m[0mscatter[0m[0;34m([0m[0msardine_data[0m[0;34m,[0m [0mx[0m[0;34m=[0m[0;34m'CatchLbs'[0m[0;34m,[0m [0my[0m[0;34m=[0m[0;34m'Sardine Larvae lbs'[0m[0;34m,[0m [0mtrendline[0m[0;34m=[0m[0;34m"ols"[0m[0;34m,[0m [0mtitle[0m [0;34m=[0m[0;34m'Sardine Larvae lbs vs Sardine Catch'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m~/.local/lib/python3.6/site-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
+[1;32m   2894[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2895[0;31m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2896[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
 
-[0;31mNameError[0m: name 'mean_squared_error' is not defined
-NameError: name 'mean_squared_error' is not defined
+[0;32mpandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+[0;32mpandas/_libs/index.pyx[0m in [0;36mpandas._libs.index.IndexEngine.get_loc[0;34m()[0m
+
+[0;32mpandas/_libs/hashtable_class_helper.pxi[0m in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+[0;32mpandas/_libs/hashtable_class_helper.pxi[0m in [0;36mpandas._libs.hashtable.PyObjectHashTable.get_item[0;34m()[0m
+
+[0;31mKeyError[0m: 'Sardine Larvae lbs'
+
+The above exception was the direct cause of the following exception:
+
+[0;31mKeyError[0m                                  Traceback (most recent call last)
+[0;32m<ipython-input-4-0a3115137e81>[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mX[0m [0;34m=[0m [0msardine_data2[0m[0;34m[[0m[0;34m'CatchLbs'[0m[0;34m][0m[0;34m.[0m[0mvalues[0m[0;34m.[0m[0mreshape[0m[0;34m([0m[0;34m-[0m[0;36m1[0m[0;34m,[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mY[0m [0;34m=[0m [0msardine_data2[0m[0;34m[[0m[0;34m'Sardine Larvae lbs'[0m[0;34m][0m[0;34m.[0m[0mvalues[0m[0;34m.[0m[0mreshape[0m[0;34m([0m[0;34m-[0m[0;36m1[0m[0;34m,[0m[0;36m1[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0mlinear_regressor[0m [0;34m=[0m [0mLinearRegression[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m [0mlinear_regressor[0m[0;34m.[0m[0mfit[0m[0;34m([0m[0mX[0m[0;34m,[0m [0mY[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0mY_pred[0m [0;34m=[0m [0mlinear_regressor[0m[0;34m.[0m[0mpredict[0m[0;34m([0m[0mX[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.local/lib/python3.6/site-packages/pandas/core/frame.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m   2904[0m             [0;32mif[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mnlevels[0m [0;34m>[0m [0;36m1[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2905[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_getitem_multilevel[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2906[0;31m             [0mindexer[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mcolumns[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mkey[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2907[0m             [0;32mif[0m [0mis_integer[0m[0;34m([0m[0mindexer[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2908[0m                 [0mindexer[0m [0;34m=[0m [0;34m[[0m[0mindexer[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m~/.local/lib/python3.6/site-packages/pandas/core/indexes/base.py[0m in [0;36mget_loc[0;34m(self, key, method, tolerance)[0m
+[1;32m   2895[0m                 [0;32mreturn[0m [0mself[0m[0;34m.[0m[0m_engine[0m[0;34m.[0m[0mget_loc[0m[0;34m([0m[0mcasted_key[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   2896[0m             [0;32mexcept[0m [0mKeyError[0m [0;32mas[0m [0merr[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 2897[0;31m                 [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0merr[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   2898[0m [0;34m[0m[0m
+[1;32m   2899[0m         [0;32mif[0m [0mtolerance[0m [0;32mis[0m [0;32mnot[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mKeyError[0m: 'Sardine Larvae lbs'
+KeyError: 'Sardine Larvae lbs'
 
