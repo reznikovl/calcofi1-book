@@ -16,3 +16,21 @@
 
 - To control which code chunks are hidden completely or just hidden but viewable by clicking a button, go into Jupyter Notebook, click the "View" tab, and then the "tags" button. If you want to **completely omit a cell** (hide both input and output), add **"remove_input"** to the tag box. If you want to **hide a cell, but keep it's output**, add **"hide_input"** to the tag box. I couldn't find a way to do this in VSCode, so you have to open the .ipynb file in Jupyter with Anaconda.
 
+## How to make changes to project
+1) Make sure that your personal branch is updated with master branch (this can be done with the GitHub Desktop application)
+    * change 'current repo' to 'calcofi-book1'
+    * change 'current branch' to your personal branch
+    * in the menu, select 'branch' -> 'update from master'
+    * click on the 'push origin' button that appears 
+    
+    Now your branch is up to date with the master branch, and you can make changes to it.
+2) Clone personal branch to local computer
+    * using the command line/terminal, navigate to desired folder
+    * type 'git clone -b <your branch name> <repo url> to copy your branch to your computer
+    * note: the repo url is https://github.com/reznikovl/calcofi1-book.git
+3) Push changes to personal branch
+    * in your working directory, type 'git add.'
+    * use 'git commit -m <comment about changes>' to commit your changes
+    * use 'git push origin <your branch name>' to push changes to your personal branch
+4) Create a pull request to the master branch
+  
