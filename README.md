@@ -15,3 +15,4 @@
     pio.renderers.default = 'notebook'
 
 - To control which code chunks are hidden completely or just hidden but viewable by clicking a button, go into Jupyter Notebook, click the "View" tab, and then the "tags" button. If you want to **completely omit a cell** (hide both input and output), add **"remove_input"** to the tag box. If you want to **hide a cell, but keep it's output**, add **"hide_input"** to the tag box. I couldn't find a way to do this in VSCode, so you have to open the .ipynb file in Jupyter with Anaconda.
+
