@@ -2,11 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 - file: intro
-- file: exploratory
+- file: analysis_header
   sections:
-    - file: summary_of_data
+    - file: data_summary
+    - file: exploring_all_species
     - file: population_visualization
-- file: content
+- file: findings_header
   sections:
     # - file: markdown
     # - file: notebooks
@@ -14,3 +15,4 @@
     - file: sardine_correlation
     - file: environment_correlation
     # - file: animation_test
+- file: conclusion
