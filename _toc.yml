@@ -1,18 +1,25 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
+# - file: intro
+# - file: analysis_header
+#   sections:
+#     - file: data_summary
+#     - file: exploring_all_species
+#     - file: population_visualization
+# - file: findings_header
+#   sections:
+#     # - file: markdown
+#     # - file: notebooks
+#     - file: correlations
+#     - file: sardine_correlation
+#     - file: environment_correlation
+#     # - file: animation_test
+# - file: conclusion
+
+
 - file: intro
-- file: analysis_header
-  sections:
-    - file: data_summary
-    - file: exploring_all_species
-    - file: population_visualization
-- file: findings_header
-  sections:
-    # - file: markdown
-    # - file: notebooks
-    - file: correlations
-    - file: sardine_correlation
-    - file: environment_correlation
-    # - file: animation_test
-- file: conclusion
+- file: sardine_history
+- file: environmental_analysis
+- file: dataset_linking
+- file: new_conclusion
