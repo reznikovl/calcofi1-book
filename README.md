@@ -33,4 +33,9 @@
     * use **git commit -m "comment about changes"** to commit your changes
     * use **git push origin "your branch name"** to push changes to your personal branch
 4) Create a pull request to the master branch
+
+5) Optional: If you merged to master, and are confident that your build directory is correct and updated, and want to publish to the github pages website, you can run this command: ghp-import -n -p -f _build/html
+
+Note: you need to run pip install ghp-import the first time you do so
+
   
