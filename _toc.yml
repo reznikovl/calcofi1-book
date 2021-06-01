@@ -2,9 +2,9 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
 # - file: intro
-# - file: analysis_header
-#   sections:
-#     - file: data_summary
+ #- file: analysis_header
+  # sections:
+   # - file: data_summary
 #     - file: exploring_all_species
 #     - file: population_visualization
 # - file: findings_header
@@ -19,7 +19,7 @@
 
 
 - file: intro
-- file: sardine_history
+- file: sardine_history 
 - file: environmental_analysis
-- file: dataset_linking
+- file: dataset_linking 
 - file: new_conclusion
