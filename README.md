@@ -18,19 +18,24 @@
 
 ## How to make changes to project
 1) Make sure that your personal branch is updated with master branch (this can be done with the GitHub Desktop application)
-    * change 'current repo' to 'calcofi-book1'
-    * change 'current branch' to your personal branch
-    * in the menu, select 'branch' -> 'update from master'
-    * click on the 'push origin' button that appears 
+    * change **'current repo'** to **'calcofi-book1'**
+    * change **'current branch'** to your personal branch
+    * in the menu, select **'branch' -> 'update from master'**
+    * click on the **'push origin'** button that appears 
     
     Now your branch is up to date with the master branch, and you can make changes to it.
 2) Clone personal branch to local computer
     * using the command line/terminal, navigate to desired folder
-    * type 'git clone -b <your branch name> <repo url> to copy your branch to your computer
-    * note: the repo url is https://github.com/reznikovl/calcofi1-book.git
+    * type **git clone -b "your branch_name" https://github.com/reznikovl/calcofi1-book.git** to copy your branch to your computer
+
 3) Push changes to personal branch
-    * in your working directory, type 'git add.'
-    * use 'git commit -m <comment about changes>' to commit your changes
-    * use 'git push origin <your branch name>' to push changes to your personal branch
+    * in your working directory, type **git add .**
+    * use **git commit -m "comment about changes"** to commit your changes
+    * use **git push origin "your branch name"** to push changes to your personal branch
 4) Create a pull request to the master branch
+
+5) Optional: If you merged to master, and are confident that your build directory is correct and updated, and want to publish to the github pages website, you can run this command: ghp-import -n -p -f _build/html
+
+Note: you need to run pip install ghp-import the first time you do so
+
   
